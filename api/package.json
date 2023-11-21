@@ -1,0 +1,14 @@
+{
+  "name": "linkhub-api",
+  "version": "0.0.0",
+  "description": "A simple bookmark/link library",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pramodh Ganeshan",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
