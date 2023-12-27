@@ -7,7 +7,7 @@ router.get('/', (req, res) => {
 
 
 router.post('/', (req, res) => {
-    
+    res.send("reading loud and clear")
 })
 
 
