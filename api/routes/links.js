@@ -7,9 +7,15 @@ const Link = mongoose.model('Link')
 router.get('/', (req, res) => {
 
   Link.find()
-    .then
+    .then(links => {
+      res.send(links)
+    })
+    .catch(error => {
+      console.log(error)
+      res.send(error)
+    })
 
-  res.send('Hello World! from links')
+  // res.send('Hello World! from links')
 })
 
 
