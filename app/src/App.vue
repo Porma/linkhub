@@ -1,15 +1,38 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <h1>LinkHub</h1>
+
+    <ul v-for="link in links" :key="link._id">
+        <LinkItem :uri="link.uri" />
+    </ul>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import LinkItem from "./components/LinkItem.vue";
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+      LinkItem
+  },
+  data() {
+    return {
+      links: []
+    }
+  },
+  methods: {
+    getLinks() {
+      fetch('/api/links')
+        .then(response => response.json())
+        .then(data => {
+          this.links = data;
+          console.log(data)
+        })
+    }
+  },
+  mounted() {
+    this.getLinks();
   }
 }
 </script>
