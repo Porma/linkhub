@@ -1,49 +1,40 @@
 <template>
-  <div id="app">
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#">LinkHub</a>
+      <a href="#" class="btn btn-primary" role="button">Login</a>
+    </div>
+  </nav>
+
+  <div class="container">
     <h1>LinkHub</h1>
 
-    <ul v-for="link in links" :key="link._id">
-        <LinkItem :uri="link.uri" />
-    </ul>
+    <LinkList />
   </div>
 </template>
 
 <script>
-import LinkItem from "./components/LinkItem.vue";
+import LinkList from "./components/LinkList.vue";
 
 export default {
   name: 'App',
   components: {
-      LinkItem
-  },
-  data() {
-    return {
-      links: []
-    }
-  },
-  methods: {
-    getLinks() {
-      fetch('/api/links')
-        .then(response => response.json())
-        .then(data => {
-          this.links = data;
-          console.log(data)
-        })
-    }
-  },
-  mounted() {
-    this.getLinks();
+      LinkList
   }
 }
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  /* font-family: Avenir, Helvetica, Arial, sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  /* color: #2c3e50; */
+  /* margin-top: 60px; */
 }
 </style>
