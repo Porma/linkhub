@@ -8,17 +8,20 @@
   </nav>
 
   <div class="container">
+    <SearchBar />
     <LinkList />
   </div>
 </template>
 
 <script>
 import LinkList from "./components/LinkList.vue";
+import SearchBar from './components/SearchBar.vue';
 
 export default {
   name: 'App',
   components: {
-      LinkList
+      LinkList,
+      SearchBar
   }
 }
 </script>

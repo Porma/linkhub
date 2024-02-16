@@ -1,5 +1,7 @@
 <template>
-    <ul class="list-group mt-5">
+    <button type="button" class="btn btn-primary">Add new link</button>
+    
+    <ul class="list-group mt-3">
       <li class="list-group-item list-group-item-action" v-for="link in links" :key="link._id">
         <div class="d-flex">    
           <div class="d-flex position-relative flex-shrink-1 overflow-hidden text-truncate">
