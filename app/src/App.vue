@@ -2,17 +2,12 @@
 
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
       <a class="navbar-brand" href="#">LinkHub</a>
       <a href="#" class="btn btn-primary" role="button">Login</a>
     </div>
   </nav>
 
   <div class="container">
-    <!-- <h1>LinkHub</h1> -->
-
     <LinkList />
   </div>
 </template>
